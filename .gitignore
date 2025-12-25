@@ -1,0 +1,33 @@
+# =========================
+# Secrets (NEVER commit)
+# =========================
+.env
+TheObviousTradesFrontEnd/
+.env.*
+!.env.example
+!.env.local.example
+
+# =========================
+# Python
+# =========================
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# =========================
+# Node / Next.js
+# =========================
+node_modules/
+.next/
+out/
+dist/
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
