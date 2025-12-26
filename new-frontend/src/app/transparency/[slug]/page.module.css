@@ -1,0 +1,122 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 18px 72px;
+}
+
+.top {
+  margin-bottom: 18px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.back:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.date {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 12px;
+  line-height: 1;
+  text-transform: none;
+}
+
+.h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.08;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0 0 18px;
+  opacity: 0.85;
+  max-width: 70ch;
+  line-height: 1.55;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cardTitle {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list li {
+  margin: 8px 0;
+  opacity: 0.92;
+  line-height: 1.5;
+}
+
+/* ✅ grid that doesn't look empty when you only have 1–2 receipts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Optional: give the "receipts" cards a bit more breathing room */
+@media (max-width: 640px) {
+  .main {
+    padding: 26px 16px 64px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}

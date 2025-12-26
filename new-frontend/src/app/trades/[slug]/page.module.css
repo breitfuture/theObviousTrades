@@ -1,0 +1,368 @@
+.page {
+  min-height: 100vh;
+  background: #070a10;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.main {
+  width: min(1120px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Top */
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 10px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.60);
+  margin-bottom: 10px;
+}
+
+.crumb {
+  color: rgba(255,255,255,0.70);
+  text-decoration: none;
+}
+.crumb:hover { color: rgba(255,255,255,0.92); }
+
+.sep { opacity: 0.55; }
+.crumbActive { color: rgba(255,255,255,0.86); }
+
+.h1 {
+  margin: 0;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.4px;
+}
+
+.lede {
+  margin-top: 10px;
+  max-width: 78ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.metaRow {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.metaBadge {
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.22);
+  color: rgba(255,255,255,0.80);
+}
+
+.metaText {
+  font-size: 12px;
+  color: rgba(255,255,255,0.62);
+}
+
+.metaDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(78, 255, 190, 0.85);
+  box-shadow: 0 0 0 4px rgba(78, 255, 190, 0.10);
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ghostBtn {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.78);
+  transition: transform 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+.ghostBtn:hover {
+  transform: translateY(-1px);
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* Layout */
+.layout {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 14px;
+  align-items: start;
+}
+
+/* Main article becomes a "reading surface" */
+.article {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(110,160,255,0.06), transparent 60%),
+    rgba(255,255,255,0.03);
+  padding: 14px;
+}
+
+.articleTop {
+  padding: 10px 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 12px;
+}
+
+.articleTitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.90);
+}
+.articleSub {
+  margin-top: 3px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.60);
+}
+
+/* Section cards */
+.section {
+  margin-top: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.18);
+  padding: 12px 12px 10px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.92);
+}
+
+.sectionLink {
+  text-decoration: none;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.sectionLink:hover { color: rgba(255,255,255,0.80); }
+
+.list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.82);
+}
+
+.li {
+  margin: 10px 0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Side */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 16px;
+  align-self: start;
+}
+
+.card {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cardTitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.90);
+}
+
+.cardSub {
+  margin-top: 3px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.60);
+}
+
+.badge {
+  font-size: 11px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* TOC */
+.toc {
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.tocLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.18);
+  padding: 10px;
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.tocLink:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.tocDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(110,160,255,0.75);
+  box-shadow: 0 0 0 4px rgba(110,160,255,0.10);
+  flex: 0 0 auto;
+}
+
+.tocText {
+  font-size: 12px;
+  color: rgba(255,255,255,0.86);
+  flex: 1;
+}
+
+.tocArrow {
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+}
+
+/* Receipts */
+.receipts {
+  padding: 10px 10px 6px;
+  display: grid;
+  gap: 8px;
+}
+
+.receiptRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-decoration: none;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.18);
+  padding: 10px;
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.receiptRow:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.receiptLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.receiptLabel {
+  font-size: 12px;
+  color: rgba(255,255,255,0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.receiptKind {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.62);
+}
+
+.receiptArrow {
+  color: rgba(255,255,255,0.60);
+  font-size: 14px;
+}
+
+.smallNote {
+  padding: 0 14px 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.58);
+}
+
+.navGrid {
+  display: grid;
+  gap: 14px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .side {
+    position: static;
+  }
+
+  .receiptLabel {
+    max-width: 100%;
+  }
+}
