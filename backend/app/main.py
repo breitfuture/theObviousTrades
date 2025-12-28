@@ -27,6 +27,8 @@ def health_db(db = Depends(get_db)):
     return {"status": "ok"}
 
 # --- Routers ---
+from app.routers import seeking_alpha
+app.include_router(seeking_alpha.router, prefix="/api/uploads")
 # Portfolio read APIs (charts, tables)
 app.include_router(portfolio.router,    prefix="/api/portfolio", tags=["portfolio"])
 
